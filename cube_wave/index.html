@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Helvetica Neue';
+        }
+        .canvas {
+            background-color: black;
+        }
+        .one-thousand-width {
+            width: 1000px;
+        }
+        .flex {
+            display: flex;
+        }
+        .center {
+            justify-content: center;
+        }
+        .flex1 {
+            flex: 1;
+        }
+        .margin8 {
+            margin: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas class="canvas" id="canvas" width="1000" height="1000"></canvas>
+    <div class="flex center one-thousand-width">
+        <span id="dimTextMin" class="margin8">5</span>
+            <input id="dimSizeSlider" class="range flex1" type="range" max="300" min="5" value="25">
+        <span id="dimTextMax" class="margin8">300</span>
+        <span class="margin8">Current Cube Size:</span>
+        <span class="margin8" id="dimValueText">25</span>
+    </div>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>

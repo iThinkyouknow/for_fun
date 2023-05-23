@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tic-tac-toe-grid {
+            width: 500px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: repeat(3, 167px);
+            grid-template-rows: repeat(3, 167px);
+            gap: 16px;
+
+        }
+
+        .tic-box {
+            background-color: black;
+            text-align: center;
+            vertical-align: middle;
+            color: white;
+        }
+
+        .rotate {
+            animation: rotateY 2s infinite;
+            animation-fill-mode: forwards;
+        }
+
+        .rotate-backwards {
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes rotateY {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(720deg);
+            }
+        }
+
+        .css-3d-text {
+            font-size: 110px;
+            font-family: Arial Black, Gadget, sans-serif;
+            text-shadow: 0px 0px 0 rgb(-7, 241, 237),
+                -1px 0px 0 rgb(-22, 226, 222),
+                -2px 0px 0 rgb(-36, 212, 208),
+                -3px 0px 0 rgb(-51, 197, 193),
+                -4px 0px 0 rgb(-65, 183, 179),
+                -5px 0px 0 rgb(-80, 168, 164),
+                -6px 0px 0 rgb(-94, 154, 150),
+                -7px 0px 0 rgb(-108, 140, 136),
+                -8px 0px 7px rgba(0, 0, 0, 0),
+                -8px 0px 1px rgba(0, 0, 0, 0.5),
+                0px 0px 7px rgba(0, 0, 0, .2);
+        }
+        .o {
+            color: #07fffb;
+        }
+        .x {
+            color: red;
+        }
+        .instruction-text {
+            color: black;
+            font-family: 'Comic Sans MS';
+            vertical-align: middle;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Annoying Tic Tac Toe</h1>
+    <div class="tic-tac-toe-grid" id="ticTacToeGrid">
+        <div class="tic-box css-3d-text"></div>
+        <div class="tic-box css-3d-text"></div>
+        <div class="tic-box css-3d-text"></div>
+        <div class="tic-box css-3d-text"></div>
+        <div class="tic-box css-3d-text"></div>
+        <div class="tic-box css-3d-text"></div>
+        <div class="tic-box css-3d-text"></div>
+        <div class="tic-box css-3d-text"></div>
+        <div class="tic-box css-3d-text"></div>
+    </div>
+    <p class="instruction-text" id="instructionText">It's your turn, Hurry up already!</p>
+    <button id="resetBtn">Play Again!</button>
+    <script src="app.js" defer></script>
+</body>
+
+</html>
